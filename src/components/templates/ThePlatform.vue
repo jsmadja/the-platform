@@ -1,7 +1,9 @@
 <template>
-  <b-container class="bv-example-row">
+  <b-container>
     <b-row>
-      <b-col>Time</b-col>
+      <b-col>
+        <clock :clock="clock" />
+      </b-col>
     </b-row>
     <b-row>
       <b-col>Controls</b-col>
@@ -12,10 +14,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
+import Clock from "@/components/atoms/Clock.vue";
+import { Clock as ClockDomain } from "@/domain/clock";
 
-@Component
-export default class ThePlatform extends Vue {}
+@Component({
+  components: { Clock }
+})
+export default class ThePlatform extends Vue {
+  @Prop() private clock!: ClockDomain;
+}
 </script>
 
 <style scoped lang="scss" />
