@@ -8,7 +8,7 @@
     <b-row>
       <b-col>Controls</b-col>
       <b-col>The Pit</b-col>
-      <b-col><Statistics :people="people"/></b-col>
+      <b-col><statistics :people="people"/></b-col>
     </b-row>
   </b-container>
 </template>

@@ -3,10 +3,6 @@ export interface Clock {
   currentTime: Date;
 }
 
-export function formatClock(clock: Clock): string {
-  return `${clock.currentTime.toLocaleDateString()} ${clock.currentTime.toLocaleTimeString()}`;
-}
-
 export function incrementClock(clock: Clock): void {
   clock.currentTime = new Date(clock.currentTime.getTime() + 1000);
 }

@@ -4,7 +4,7 @@
     <ul>
       <li>Number of people: {{ people.length }}</li>
       <li>
-        <b-table striped hover :items="items" sticky-header="300px"	small></b-table>
+        <b-table striped hover :items="items" sticky-header="300px"	small />
       </li>
     </ul>
   </div>
