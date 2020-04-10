@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col>Controls</b-col>
+      <b-col><Controls /></b-col>
       <b-col>The Pit</b-col>
       <b-col><statistics :people="people"/></b-col>
     </b-row>
@@ -19,9 +19,10 @@ import Clock from "@/components/atoms/Clock.vue";
 import Statistics from "@/components/organisms/Statistics.vue";
 import { Clock as ClockDomain } from "@/domain/clock";
 import { People } from "@/domain/people";
+import Controls from "@/components/organisms/Controls.vue";
 
 @Component({
-  components: { Statistics, Clock }
+  components: { Controls, Statistics, Clock }
 })
 export default class ThePlatform extends Vue {
   @Prop() private clock!: ClockDomain;
