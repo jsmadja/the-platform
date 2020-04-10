@@ -15,7 +15,6 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import { People } from "@/domain/people";
 import { Platform as PlatformModel } from "@/domain/platform";
 import Floor from "@/components/molecules/Floor.vue";
-import _ from "lodash";
 
 @Component({
   components: { Floor }
@@ -27,7 +26,9 @@ export default class Pit extends Vue {
 
   data() {
     return {
-      floors: _.range(this.floorCount).map(level => ({ level: level + 1 }))
+      floors: Array.from(Array(this.floorCount).keys()).map(level => ({
+        level: level + 1
+      }))
     };
   }
 

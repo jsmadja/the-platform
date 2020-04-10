@@ -13,7 +13,6 @@ export default class Platform extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "src/variables";
 
 .platform {
   height: 6px;

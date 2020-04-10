@@ -31,11 +31,6 @@ export default class Floor extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "src/variables";
-
-$wall-color: #535c68;
-$hole-width: $floor-width/4;
-
 .floor {
   background: $wall-color;
   border-color: #95afc0;
