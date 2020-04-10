@@ -4,11 +4,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Clock, formatClock } from "@/domain/clock";
+import { Clock as ClockDomain, formatClock } from "@/domain/clock";
 
 @Component
-export default class ThePlatform extends Vue {
-  @Prop() private clock!: Clock;
+export default class Clock extends Vue {
+  @Prop() private clock!: ClockDomain;
 
   format(): string {
     return formatClock(this.clock);
