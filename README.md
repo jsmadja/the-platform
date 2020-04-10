@@ -2,6 +2,8 @@
 
 # The Platform
 
+[the-platform.surge.sh](http://the-platform.surge.sh/)
+
 ## How to contribute
 
 ```shell script
