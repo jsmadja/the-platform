@@ -1,12 +1,18 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
+import ThePlatform from "../views/ThePlatformPage.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
+    name: "ThePlatform",
+    component: ThePlatform
+  },
+  {
+    path: "/home",
     name: "Home",
     component: Home
   },
