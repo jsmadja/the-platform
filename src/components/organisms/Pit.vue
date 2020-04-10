@@ -32,8 +32,8 @@ export default class Pit extends Vue {
     };
   }
 
-  getInhabitantsOfFloor(floorNumber: number) {
-    return [];
+  getInhabitantsOfFloor(floor: number) {
+    return this.people.filter(person => person.floor === floor);
   }
 }
 </script>
