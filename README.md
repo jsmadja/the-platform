@@ -1,34 +1,12 @@
-# the-platform
+![Build & deploy](https://github.com/jsmadja/the-platform/workflows/Build%20&%20deploy/badge.svg?branch=master)
 
-## Project setup
-```
+# The Platform
+
+[the-platform.surge.sh](http://the-platform.surge.sh/)
+
+## How to contribute
+
+```shell script
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
