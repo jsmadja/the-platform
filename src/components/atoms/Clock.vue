@@ -11,7 +11,7 @@ export default class Clock extends Vue {
   @Prop() private clock!: ClockDomain;
 
   format(): string {
-      return `${this.clock.currentTime.toLocaleDateString()} ${this.clock.currentTime.toLocaleTimeString()}`;
+    return `${this.clock.currentTime.toLocaleDateString()} ${this.clock.currentTime.toLocaleTimeString()}`;
   }
 }
 </script>

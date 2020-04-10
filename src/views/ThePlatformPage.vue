@@ -1,5 +1,10 @@
 <template>
-  <ThePlatform :clock="clock" :people="people" />
+  <ThePlatform
+    :clock="clock"
+    :people="people"
+    :floor-count="floorCount"
+    :platform="platform"
+  />
 </template>
 
 <script>
@@ -10,6 +15,7 @@ import { createClock, incrementClock } from "@/domain/clock";
 import { createInitialPopulation } from "@/domain/people";
 
 const MAX_PEOPLE_CAPACITY = 666;
+const FLOOR_COUNT = 5;
 
 @Component({
   components: { Clock, ThePlatform }
@@ -24,7 +30,9 @@ export default class ThePlatformPage extends Vue {
   data() {
     return {
       clock: createClock(),
-      people: createInitialPopulation(MAX_PEOPLE_CAPACITY)
+      people: createInitialPopulation(MAX_PEOPLE_CAPACITY),
+      floorCount: FLOOR_COUNT,
+      platform: {floor: 3}
     };
   }
 }
