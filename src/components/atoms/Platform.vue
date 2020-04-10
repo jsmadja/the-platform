@@ -13,7 +13,6 @@ export default class Platform extends Vue {
 </script>
 
 <style scoped lang="scss">
-
 .platform {
   height: 6px;
   background: green;
