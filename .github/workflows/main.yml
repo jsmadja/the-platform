@@ -1,4 +1,4 @@
-name: On push events on `master` build then deploy to Surge
+name: Build & deploy
 
 on:
   push:
