@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { People } from "@/domain/people";
+import { People, getInhabitantsOfFloor } from "@/domain/people";
 import { Platform as PlatformModel } from "@/domain/platform";
 import Floor from "@/components/molecules/Floor.vue";
 
@@ -33,7 +33,7 @@ export default class Pit extends Vue {
   }
 
   getInhabitantsOfFloor(floor: number) {
-    return this.people.filter(person => person.floor === floor);
+    return getInhabitantsOfFloor(this.people, floor);
   }
 }
 </script>
