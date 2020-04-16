@@ -15,7 +15,9 @@ import { createClock, incrementClock } from "@/domain/clock";
 import { createInitialPopulation } from "@/domain/people";
 
 const FLOOR_COUNT = 333;
-const MAX_PEOPLE_CAPACITY = FLOOR_COUNT * 2;
+const INITIAL_PEOPLE_PER_FLOOR = 2;
+const MAX_PEOPLE_CAPACITY = FLOOR_COUNT * INITIAL_PEOPLE_PER_FLOOR;
+const UNFOODABLE_FLOOR_COUNT = 51;
 
 @Component({
   components: { Clock, ThePlatform }
@@ -32,7 +34,11 @@ export default class ThePlatformPage extends Vue {
       clock: createClock(),
       people: createInitialPopulation(MAX_PEOPLE_CAPACITY),
       floorCount: FLOOR_COUNT,
-      platform: {floor: 1}
+      platform: {
+        floor: 0,
+        foodQuantity:
+          FLOOR_COUNT - UNFOODABLE_FLOOR_COUNT * INITIAL_PEOPLE_PER_FLOOR
+      }
     };
   }
 }
