@@ -11,7 +11,7 @@
         <pit :floor-count="floorCount" :people="people" :platform="platform" />
       </b-col>
       <b-col>
-        <statistics :people="people" />
+        <statistics :people="people" :platform="platform" />
       </b-col>
     </b-row>
   </b-container>

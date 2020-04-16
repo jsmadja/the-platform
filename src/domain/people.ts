@@ -30,14 +30,18 @@ export interface Person {
   id: number;
   firstname: string;
   lastname: string;
+  floor: number;
 }
 
 export type People = Person[];
 
 export function createInitialPopulation(size: number): People {
-  return _.range(size).map(index => ({
-    id: index,
-    firstname: _.shuffle(firstnames)[0],
-    lastname: _.shuffle(lastnames)[0]
-  }));
+  return _
+    .range(size)
+    .map(index => ({
+      id: index,
+      firstname: _.shuffle(firstnames)[0],
+      lastname: _.shuffle(lastnames)[0],
+      floor: index % 2 === 0 ? index / 2 : (index / 2) + 0.5
+    }));
 }
