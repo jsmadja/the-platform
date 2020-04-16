@@ -19,14 +19,20 @@ const INITIAL_PEOPLE_PER_FLOOR = 2;
 const MAX_PEOPLE_CAPACITY = FLOOR_COUNT * INITIAL_PEOPLE_PER_FLOOR;
 const UNFOODABLE_FLOOR_COUNT = 51;
 
+function update(clock) {
+  const interval = setInterval(() => {
+    incrementClock(clock);
+    clearInterval(interval);
+    update(clock);
+  }, 1000 / clock.speed);
+}
+
 @Component({
   components: { Clock, ThePlatform }
 })
 export default class ThePlatformPage extends Vue {
   mounted() {
-    setInterval(() => {
-      incrementClock(this.clock);
-    }, 1000);
+    update(this.clock);
   }
 
   data() {

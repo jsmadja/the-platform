@@ -6,7 +6,7 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col><Controls /></b-col>
+      <b-col><Controls :clock="clock"/></b-col>
       <b-col cols="3" align="center">
         <pit :floor-count="floorCount" :people="people" :platform="platform" />
       </b-col>

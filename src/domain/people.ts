@@ -1,29 +1,29 @@
 import * as _ from "lodash";
 
 const firstnames = [
-  'Gabriel',
-  'Alexandre',
-  'Arthur',
-  'Adam',
-  'Raphaël',
-  'Louis',
-  'Paul',
-  'Antoine',
-  'Maxime',
-  'Thomas'
+  "Gabriel",
+  "Alexandre",
+  "Arthur",
+  "Adam",
+  "Raphaël",
+  "Louis",
+  "Paul",
+  "Antoine",
+  "Maxime",
+  "Thomas"
 ];
 
 const lastnames = [
-  'Petit',
-  'Durand',
-  'Dubois',
-  'Moreau',
-  'Lefebvre',
-  'Leroy',
-  'Roux',
-  'Morel',
-  'Fournier',
-  'Girard'
+  "Petit",
+  "Durand",
+  "Dubois",
+  "Moreau",
+  "Lefebvre",
+  "Leroy",
+  "Roux",
+  "Morel",
+  "Fournier",
+  "Girard"
 ];
 
 export interface Person {

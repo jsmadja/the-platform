@@ -1,7 +1,7 @@
 <template>
   <div class="controls">
     Controls
-    <Speed />
+    <Speed :clock="clock" />
     <Events />
     <Actions />
   </div>
@@ -14,6 +14,7 @@ import Actions from "@/components/molecules/Actions";
 
 export default {
   name: "Controls",
+  props: ["clock"],
   components: { Actions, Events, Speed }
 };
 </script>
