@@ -4,6 +4,11 @@
       <span class="floor-number">{{ level }}</span>
       <platform v-show="platformIsHere()" :platform="platform" />
       <div v-show="!platformIsHere()" class="hole" />
+      <inhabitant
+        v-for="inhabitant in inhabitants"
+        :key="inhabitant.id"
+        :inhabitant="inhabitant"
+      />
     </div>
   </div>
 </template>
@@ -11,18 +16,17 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Platform from "@/components/atoms/Platform.vue";
+import Inhabitant from "@/components/atoms/Inhabitant.vue";
 import { Platform as PlatformModel } from "@/domain/platform";
+import { People } from "@/domain/people";
 
 @Component({
-  components: { Platform }
+  components: { Platform, Inhabitant }
 })
 export default class Floor extends Vue {
   @Prop() private level!: number;
   @Prop() private platform!: PlatformModel;
-
-  data() {
-    return {};
-  }
+  @Prop() private inhabitants!: People;
 
   platformIsHere() {
     return this.platform.floor === this.level;
